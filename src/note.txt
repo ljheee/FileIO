@@ -1,0 +1,27 @@
+Java NIO  
+since jkd1.4  用于更底层的实现，比Java io效率高。常用于服务器等非阻塞式I/O
+Netty 就是基于java nio底层实现的。
+
+...........................................
+InputStream 
+OutputStream  抽象类
+
+FileInputStream
+FileOutputStream
+ 
+BufferedInputStream			可包装FileInputStream
+BufferedOutputStream
+
+DataInputStream   按基本类型读，一次读一个int,double
+DataOutputStream
+
+字节数组输出流--不需要包装
+默认32字节，会根据需要自动增长；数据内容是放在内存里的
+本质是一个  可变长的--内存数组。
+ByteArrayOutputStream byteOut = new ByteArrayOutputStream()
+
+
+
+
+
+
