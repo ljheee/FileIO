@@ -7,6 +7,7 @@ import java.io.*;
  *
  */
 public class FileOperate {
+	
 
 	/**
 	 * 复制单个 文件(使用字节流)
@@ -105,6 +106,7 @@ public class FileOperate {
 	}
 	
 	
+	
 	/**
 	 * JDK1.7及以上可用
 	 * 资源、流的打开==放到try()  括号内；不需要自己关闭
@@ -136,6 +138,7 @@ public class FileOperate {
 	
 	/**
 	 * 返回文件大小
+	 * 结果/1024=...KB
 	 * @param file	
 	 * @return	返回文件字节大小;return -1表示源文件为空或不存在
 	 */

@@ -66,8 +66,8 @@ public class DataStreamDemo {
 			out = new FileOutputStream("data.txt");
 			dataOut = new DataOutputStream(new BufferedOutputStream(out));
 			
-			dataOut.writeInt(5);  //按基本类型，一次写一次
-			dataOut.writeInt(59);
+			dataOut.writeInt(5);  //按基本类型，一次写一次，读取时按顺序读
+			dataOut.writeInt(59); //因此可以把他们封装成对象，使用ObjectInputStream
 			dataOut.writeInt(56);
 			dataOut.writeInt(53);
 			dataOut.writeInt(new Integer(77));

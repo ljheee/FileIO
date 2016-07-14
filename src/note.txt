@@ -15,11 +15,16 @@ BufferedOutputStream
 DataInputStream   按基本类型读，一次读一个int,double 等基本类型
 DataOutputStream
 
+
+ObjectInputStream  一次读写一个[实体]对象，且自定义的实体类implements Serializable
+ObjectOutputStream	对象输入、出流，基于DataInputStream，也提供按基本类型读写的方法
+
 FilterInputStream
 FilterOutputStream
 
-ObjectInputStream
-ObjectOutputStream
+这些流，可多层包装，每一层只做好一件事情。
+
+
 
 字节数组输出流--不需要包装
 默认32字节，会根据需要自动增长；数据内容是放在内存里的
