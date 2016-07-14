@@ -132,14 +132,43 @@ public class FileOperate {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	/**
+	 * 返回文件大小
+	 * @param file	
+	 * @return	返回文件字节大小;return -1表示源文件为空或不存在
+	 */
+	public static int fileSize(File file){
+		
+		FileInputStream fin = null;
+		int size = 0;
+		if(!file.exists()||file==null)  return -1;
+		
+		try {
+			fin = new FileInputStream(file);
+			size = fin.available();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally{
+			try {
+				if(fin!=null) fin.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		return size;
+	}
 
 	public static void main(String[] args) {
 		//测试复制文件
 //		copySingleFile(new File("D:/mm.txt"), new File("C:/mm.txt"));
 //		copySingleFile17(new File("D:/mm.txt"), new File("C:/mm.txt"));
-		copySingleFile2(new File("D:/mm.txt"), new File("C:/mm.txt"));
-	
-	
+//		copySingleFile2(new File("D:/mm.txt"), new File("C:/mm.txt"));
+		int s = fileSize(new File("D:/servlet-api.jar"));
+		System.out.println(s);
 	}
 
 }
