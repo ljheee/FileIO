@@ -3,6 +3,7 @@ since jkd1.4  用于更底层的实现，比Java io效率高。常用于服务器等非阻塞式I/O
 Netty 就是基于java nio底层实现的。
 
 ...........................................
+字节流---通常用于读写普通文件，如二进制文件；按字节[数组]为最小单位
 InputStream 
 OutputStream  抽象类
 
@@ -31,6 +32,20 @@ FilterOutputStream
 本质是一个  可变长的--内存数组。
 ByteArrayOutputStream byteOut = new ByteArrayOutputStream()
 ByteArrayInputStream
+
+
+字符流---通常用于读取可阅读的源文件，比如文本。
+Reader
+Writer --抽象类
+
+FileReader
+FileWriter
+
+
+
+
+
+
 
 
 
