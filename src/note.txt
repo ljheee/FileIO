@@ -42,7 +42,7 @@ FileReader
 FileWriter
 
 
-
+RandomAccessFile实现了--DataInput、DataOutput接口，既可输入，也可输出
 
 
 
